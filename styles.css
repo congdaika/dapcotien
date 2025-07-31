@@ -1,0 +1,222 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #808080;  /* Added gray background */
+}
+
+h1, h2 {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.title h1 {
+  font-size: 2rem;
+}
+
+.blinking-text {
+  animation: blink 1s step-start 0s infinite;
+}
+
+@keyframes blink {
+  50% {
+    color: red;
+  }
+}
+
+.flags {
+  display: flex;
+  align-items: center;
+}
+
+.flag img {
+  width: 30px;
+  margin-left: 10px;
+  animation: wave 1s infinite;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.sg79vip {
+  margin-left: 10px;
+  font-size: 1.5rem;
+}
+
+/* Search Bar */
+#search-bar {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.search-container {
+  display: inline-flex;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid #333;
+}
+
+#search-input {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+
+.search-btn {
+  background-color: #4CAF50;
+  padding: 10px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  width: 20px;
+  margin-right: 10px;
+}
+
+/* Location Section */
+#locations {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.location-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.location-card {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.location-card:hover {
+  transform: scale(1.1);
+}
+
+/* Menu */
+.menu-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  background-color: #333;
+  width: 200px;
+  border-radius: 10px;
+  z-index: 100;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 10px;
+}
+
+.menu ul li {
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu ul li:hover {
+  background-color: #444;
+}
+
+/* Product Section */
+#products {
+  padding: 50px 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.product-card {
+  background-color: red;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  animation: blink 1s infinite;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.investor-logos img {
+  width: 100px;
+  margin: 10px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
